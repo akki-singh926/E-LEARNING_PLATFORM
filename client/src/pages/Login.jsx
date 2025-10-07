@@ -30,6 +30,11 @@ function Login() {
     setLoginInput({...loginInput,[name]:value})
   }
  }
+ const handleRegistration=(type)=>{
+  const inputData=type ==='signup'?signupInput:loginInput
+  console.log(inputData);
+  
+ }
 
   return (
      <div className="flex item-center w-full  justify-center">
@@ -49,19 +54,19 @@ function Login() {
             <CardContent className="grid gap-6">
               <div className="grid gap-3">
                 <Label htmlFor="tabs-demo-name">Name</Label>
-                <Input type='text' name='name'value={signupInput.name}onChange={(e)=>changeInputHandler(e,'signup')}placeholder="eg Akash" required='true'/>
+                <Input type='text' name='name'value={signupInput.name}onChange={(e)=>changeInputHandler(e,'signup')}placeholder="eg Akash" required={true}/>
               </div>
               <div className="grid gap-3">
                 <Label htmlFor="tabs-demo-email">Email</Label>
-                 <Input type='email'name='email'value={signupInput.email} onChange={(e)=>changeInputHandler(e,'signup')} placeholder="eg Akash@gmail.com" required='true'/>
+                 <Input type='email'name='email'value={signupInput.email} onChange={(e)=>changeInputHandler(e,'signup')} placeholder="eg Akash@gmail.com" required={true}/>
               </div>
               <div className="grid gap-3">
                 <Label htmlFor="tabs-demo-password">Password</Label>
-                 <Input type='password'name='password'value={signupInput.password} onChange={(e)=>changeInputHandler(e,'signup')} placeholder="eg.******" required='true'/>
+                 <Input type='password'name='password'value={signupInput.password} onChange={(e)=>changeInputHandler(e,'signup')} placeholder="eg.******" required={true}/>
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Signup</Button>
+              <Button onClick={()=>handleRegistration("signup")}>Signup</Button>
             </CardFooter>
           </Card>
         </TabsContent>
@@ -76,15 +81,15 @@ function Login() {
             <CardContent className="grid gap-6">
               <div className="grid gap-3">
                 <Label htmlFor="tabs-demo-email">Email</Label>
-                 <Input type='email' name='email'value={loginInput.email}onChange={(e)=>changeInputHandler(e,'login')} placeholder="eg Akash@gmail.com" required='true'/>
+                 <Input type='email' name='email'value={loginInput.email}onChange={(e)=>changeInputHandler(e,'login')} placeholder="eg Akash@gmail.com" required={true}/>
               </div>
               <div className="grid gap-3">
                 <Label htmlFor="tabs-demo-password">Password</Label>
-                 <Input type='password'name='password'value={loginInput.password} onChange={(e)=>changeInputHandler(e,'login')} placeholder="eg.******" required='true'/>
+                 <Input type='password'name='password'value={loginInput.password} onChange={(e)=>changeInputHandler(e,'login')} placeholder="eg.******" required={true}/>
               </div>
             </CardContent>
             <CardFooter>
-              <Button>Login</Button>
+              <Button onClick={()=>{handleRegistration('Login')}}>Login</Button>
             </CardFooter>
           </Card>
         </TabsContent>

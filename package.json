@@ -1,0 +1,30 @@
+{
+  "name": "e-learning",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akki-singh926/E-LEARNING_PLATFORM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akki-singh926/E-LEARNING_PLATFORM/issues"
+  },
+  "homepage": "https://github.com/akki-singh926/E-LEARNING_PLATFORM#readme",
+  "description": "",
+  "dependencies": {
+    "brcypt": "^1.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.19.0",
+    "nodemon": "^3.1.10"
+  }
+}
